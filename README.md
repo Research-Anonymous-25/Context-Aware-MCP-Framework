@@ -1,9 +1,7 @@
-# Context-Aware-MCP-Framework
-Enhancing Model Context Protocol (MCP) with Context-Aware Server Collaboration
+# Context-Aware-MCP-Framework: Implementation of Shared-Context Multi-Agent Coordination for the Model Context Protocol (MCP)
 
-An Implementation of Shared-Context Multi-Agent Coordination for the Model Context Protocol (MCP)
 This repository contains the reference implementation used in the experiments of the paper:
-Enhancing Model Context Protocol (MCP) with Context-Aware Server Collaboration (2025)
+"Enhancing Model Context Protocol (MCP) with Context-Aware Server Collaboration (2025)"
 It provides traditional (stateless) MCP baselines and the proposed Context-Aware MCP architecture, along with evaluation scripts, figures, and benchmark outputs for two representative multi-agent workflows:
 TravelPlanner (real-world itinerary planning)
 Wedding Logistics (REALM-Bench P5) (multi-agent scheduling and coordination)
@@ -56,5 +54,4 @@ python wedding_planner_client_mcp.py
 - Wedding P5 eval: `usecases/UseCase2_WeddingLogistics/evaluation/evaluation_trad_p5.py` or `evaluate_mcp_P5.py`
 
 - Outputs are provided for the four benchmark evaluation metrics. The plots are also shown in the Research paper figures (ExecutionTime, Completeness, BERTScore, RougeL).
-```
 
