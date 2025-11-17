@@ -1,0 +1,63 @@
+{
+  "guests": [
+    {
+      "name": "family1",
+      "arrival_time": "14:00",
+      "location": "airport"
+    },
+    {
+      "name": "family2",
+      "arrival_time": "15:00",
+      "location": "hotel"
+    }
+  ],
+  "vehicles": [
+    {
+      "type": "van",
+      "capacity": 8,
+      "location": "hotel"
+    },
+    {
+      "type": "car1",
+      "capacity": 4,
+      "location": "church"
+    },
+    {
+      "type": "car2",
+      "capacity": 4,
+      "location": "reception_venue"
+    }
+  ],
+  "errands": [
+    "flowers",
+    "cake",
+    "decorations",
+    "photographer",
+    "music"
+  ],
+  "constraints": {
+    "wedding_deadline": "18:00",
+    "vehicle_capacities": {
+      "van": 8,
+      "car1": 4,
+      "car2": 4
+    },
+    "errand_dependencies": [
+      [
+        "flowers",
+        "decorations"
+      ],
+      [
+        "cake",
+        "reception"
+      ]
+    ]
+  },
+  "goals": [
+    "coordinate_arrivals",
+    "complete_errands",
+    "optimize_vehicle_usage"
+  ],
+  "transport_plan": [],
+  "next_action": "arrival"
+}

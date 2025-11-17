@@ -1,0 +1,147 @@
+{
+  "guests": [
+    {
+      "name": "family1",
+      "arrival_location": "airport",
+      "arrival_time": "14:00",
+      "needs_ride": true,
+      "status": "requested"
+    },
+    {
+      "name": "family2",
+      "arrival_location": "hotel",
+      "arrival_time": "15:00",
+      "needs_ride": true,
+      "status": "requested"
+    }
+  ],
+  "vehicles": [
+    {
+      "name": "car1",
+      "capacity": 4,
+      "location": "reception_venue"
+    },
+    {
+      "name": "car2",
+      "capacity": 4,
+      "location": "reception_venue"
+    },
+    {
+      "name": "van",
+      "capacity": 8,
+      "location": "reception_venue"
+    }
+  ],
+  "errands": [
+    {
+      "name": "flowers",
+      "status": "requested"
+    },
+    {
+      "name": "cake",
+      "status": "requested"
+    },
+    {
+      "name": "decorations",
+      "status": "requested"
+    },
+    {
+      "name": "photographer",
+      "status": "requested"
+    },
+    {
+      "name": "music",
+      "status": "requested"
+    }
+  ],
+  "constraints": {
+    "errand_dependencies": [
+      [
+        "flowers",
+        "decorations"
+      ],
+      [
+        "cake",
+        "reception"
+      ]
+    ],
+    "wedding_deadline": "18:00"
+  },
+  "goals": [
+    "Coordinate all guest arrivals",
+    "Complete all errands",
+    "Optimize vehicle usage"
+  ],
+  "transport_requests": [],
+  "transport_plan": [
+    {
+      "vehicle": "car1",
+      "action": "pickup_errand",
+      "item": "flowers",
+      "from": "florist",
+      "to": "wedding_venue",
+      "start_time": "10:00",
+      "end_time": "11:00"
+    },
+    {
+      "vehicle": "car1",
+      "action": "pickup_errand",
+      "item": "decorations",
+      "from": "decoration_supplier",
+      "to": "wedding_venue",
+      "start_time": "11:30",
+      "end_time": "12:30"
+    },
+    {
+      "vehicle": "van",
+      "action": "pickup_errand",
+      "item": "cake",
+      "from": "bakery",
+      "to": "reception_venue",
+      "start_time": "10:30",
+      "end_time": "11:30"
+    },
+    {
+      "vehicle": "car2",
+      "action": "pickup_errand",
+      "item": "photographer",
+      "from": "city_center",
+      "to": "wedding_venue",
+      "start_time": "12:00",
+      "end_time": "12:30"
+    },
+    {
+      "vehicle": "car1",
+      "action": "pickup_errand",
+      "item": "music",
+      "from": "music_supplier",
+      "to": "wedding_venue",
+      "start_time": "13:00",
+      "end_time": "14:00"
+    },
+    {
+      "vehicle": "van",
+      "action": "pickup_guest",
+      "item": "family1",
+      "from": "airport",
+      "to": "wedding_venue",
+      "start_time": "14:00",
+      "end_time": "14:45"
+    },
+    {
+      "vehicle": "car2",
+      "action": "pickup_guest",
+      "item": "family2",
+      "from": "hotel",
+      "to": "wedding_venue",
+      "start_time": "15:00",
+      "end_time": "15:30"
+    }
+  ],
+  "final_summary": "The logistics plan for the wedding includes picking up all necessary items and guests. First, 'car1' will pick up the flowers at 10:00 and deliver them to the wedding venue by 11:00. Following that, 'car1' will pick up decorations at 11:30 and deliver them by 12:30. Simultaneously, 'van' will collect the cake at 10:30 and deliver it to the reception venue by 11:30. 'Car2' will then pick up the photographer from the city center at 12:00 and deliver them to the wedding venue by 12:30. Next, 'car1' will complete the music pick up at 13:00 and deliver by 14:00. For guests, 'van' will pick up family1 from the airport at 14:00 and arrive by 14:45. Lastly, 'car2' will pick up family2 from the hotel at 15:00 and arrive by 15:30.",
+  "metrics": {
+    "llm_calls": 2,
+    "tool_calls": 3,
+    "execution_time_sec": 8.52
+  }
+}
